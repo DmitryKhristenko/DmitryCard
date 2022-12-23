@@ -11,6 +11,8 @@
 		B5920C4C28E4A4E30049F9DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5920C4B28E4A4E30049F9DD /* ContentView.swift */; };
 		B5920C4E28E4A4EC0049F9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5920C4D28E4A4EC0049F9DD /* Assets.xcassets */; };
 		B5920C5128E4A4EC0049F9DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5920C5028E4A4EC0049F9DD /* Preview Assets.xcassets */; };
+		B5920C5928E4A9390049F9DD /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5920C5828E4A9390049F9DD /* Pacifico-Regular.ttf */; };
+		B5920C5C28E4DDA90049F9DD /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5920C5B28E4DDA80049F9DD /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		B5920C4B28E4A4E30049F9DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5920C4D28E4A4EC0049F9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5920C5028E4A4EC0049F9DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5920C5828E4A9390049F9DD /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		B5920C5A28E4AA030049F9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B5920C5B28E4DDA80049F9DD /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		B5920C4828E4A4E30049F9DD /* DmitryCard */ = {
 			isa = PBXGroup;
 			children = (
+				B5920C5A28E4AA030049F9DD /* Info.plist */,
+				B5920C5728E4A91F0049F9DD /* fonts */,
 				B5920C4928E4A4E30049F9DD /* DmitryCardApp.swift */,
 				B5920C4B28E4A4E30049F9DD /* ContentView.swift */,
+				B5920C5B28E4DDA80049F9DD /* InfoView.swift */,
 				B5920C4D28E4A4EC0049F9DD /* Assets.xcassets */,
 				B5920C4F28E4A4EC0049F9DD /* Preview Content */,
 			);
@@ -67,6 +75,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B5920C5728E4A91F0049F9DD /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B5920C5828E4A9390049F9DD /* Pacifico-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +93,7 @@
 				B5920C4228E4A4E30049F9DD /* Sources */,
 				B5920C4328E4A4E30049F9DD /* Frameworks */,
 				B5920C4428E4A4E30049F9DD /* Resources */,
+				B5DCE10D2955A9510025F0C8 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -125,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5920C5928E4A9390049F9DD /* Pacifico-Regular.ttf in Resources */,
 				B5920C5128E4A4EC0049F9DD /* Preview Assets.xcassets in Resources */,
 				B5920C4E28E4A4EC0049F9DD /* Assets.xcassets in Resources */,
 			);
@@ -132,12 +150,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B5DCE10D2955A9510025F0C8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B5920C4228E4A4E30049F9DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B5920C4C28E4A4E30049F9DD /* ContentView.swift in Sources */,
+				B5920C5C28E4DDA90049F9DD /* InfoView.swift in Sources */,
 				B5920C4A28E4A4E30049F9DD /* DmitryCardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,11 +311,13 @@
 				DEVELOPMENT_TEAM = 5X6RZ5N5BC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DmitryCard/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +342,13 @@
 				DEVELOPMENT_TEAM = 5X6RZ5N5BC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DmitryCard/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
